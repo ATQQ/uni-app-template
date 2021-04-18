@@ -16,20 +16,34 @@ uni-app vue-cli 模板
 * [x] vuex
 * [x] 类Axios[axios-miniprogram](https://github.com/fluffff/axios-miniprogram#readme)
 * [x] [vant-weapp](https://github.com/youzan/vant-weapp#readme)
-## Project setup
+
+## 开始
+### 安装依赖
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### 开发热重载
+#### h5
 ```
 yarn serve
 ```
+#### 微信小程序
+```
+yarn dev:mp-weixin
+```
 
-### Compiles and minifies for production
+### 生产环境打包构建
+#### h5
 ```
 yarn build
 ```
 
+#### 微信小程序
+```
+yarn build:mp-weixin
+```
+
+其它更多脚本 查看 [package.json](./package.json)中的scripts
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
