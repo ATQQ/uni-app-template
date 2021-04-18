@@ -30,6 +30,11 @@
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
     "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "backgroundColor": "#F8F8F8",
+    // 此处引入vant-weapp组件
+    "usingComponents": {
+      "van-button": "/wxcomponents/@vant/weapp/dist/button/index",
+      "van-icon": "/wxcomponents/@vant/weapp/dist/icon/index"
+    }
   }
 }
