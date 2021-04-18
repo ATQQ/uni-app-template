@@ -13,8 +13,8 @@ uni-app vue-cli 模板
 * [x] sass
 
 ### prod
-* [ ] vuex
-* [ ] 类Axios[axios-miniprogram](https://github.com/fluffff/axios-miniprogram#readme)
+* [x] vuex
+* [x] 类Axios[axios-miniprogram](https://github.com/fluffff/axios-miniprogram#readme)
 * [x] [vant-weapp](https://github.com/youzan/vant-weapp#readme)
 ## Project setup
 ```
