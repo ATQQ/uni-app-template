@@ -43,7 +43,12 @@ yarn build
 ```
 yarn build:mp-weixin
 ```
+然后将编译结果`dist/dev/mp-weixin`导入微信开发者工具即可运行
+
+![图片](https://img.cdn.sugarat.top/mdImg/MTYzNzQxNjc3MjA4Mw==637416772083)
+
+![图片](https://img.cdn.sugarat.top/mdImg/MTYzNzQ3MjYwMTg4OQ==637472601889)
+
+![图片](https://img.cdn.sugarat.top/mdImg/MTYzNzQ3MjY0NDEzOA==637472644138)
 
 其它更多脚本 查看 [package.json](./package.json)中的scripts
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
