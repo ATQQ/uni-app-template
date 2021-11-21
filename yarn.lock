@@ -1777,10 +1777,10 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@vant/weapp@^1.6.8":
-  version "1.6.8"
-  resolved "https://registry.npm.taobao.org/@vant/weapp/download/@vant/weapp-1.6.8.tgz#948ae16fba07c5a2054c52783f22aaf6a04453e1"
-  integrity sha1-lIrhb7oHxaIFTFJ4PyKq9qBEU+E=
+"@vant/weapp@^1.9.2":
+  version "1.9.2"
+  resolved "https://registry.npmmirror.com/@vant/weapp/download/@vant/weapp-1.9.2.tgz#406174c11d3f421dbbeff995a556ce1d30629908"
+  integrity sha1-QGF0wR0/Qh277/mVpVbOHTBimQg=
 
 "@vue/babel-helper-vue-jsx-merge-props@^1.2.1":
   version "1.2.1"
@@ -11366,10 +11366,10 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.npm.taobao.org/vue-template-es2015-compiler/download/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha1-HuO8mhbsv1EYvjNLsV+cRvgvWCU=
 
-vue@^2.6.11:
-  version "2.6.12"
-  resolved "https://registry.npm.taobao.org/vue/download/vue-2.6.12.tgz?cache=0&sync_timestamp=1617321643721&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue%2Fdownload%2Fvue-2.6.12.tgz#f5ebd4fa6bd2869403e29a896aed4904456c9123"
-  integrity sha1-9evU+mvShpQD4pqJau1JBEVskSM=
+vue@^2.6.14:
+  version "2.6.14"
+  resolved "https://registry.npmmirror.com/vue/download/vue-2.6.14.tgz?cache=0&sync_timestamp=1636948143359&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fvue%2Fdownload%2Fvue-2.6.14.tgz#e51aa5250250d569a3fbad3a8a5a687d6036e235"
+  integrity sha1-5RqlJQJQ1Wmj+606ilpofWA24jU=
 
 vuex@^3.2.0:
   version "3.6.2"

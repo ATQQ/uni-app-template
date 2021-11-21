@@ -3,7 +3,7 @@ uni-app vue-cli 模板
 
 主要用于小程序开发使用
 
->使用Node 版本 v12.22.1,
+* Vue-3 TS模板见此处：[uni-vue3-ts-template](https://github.com/ATQQ/uni-vue3-ts-template)
 ## feature
 ### dev
 * [x] Vue2
