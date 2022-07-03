@@ -1,0 +1,36 @@
+{
+  "parser": "vue-eslint-parser",
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb-base",
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:vue/vue3-essential"
+  ],
+  "plugins": ["vue", "todo-ddl"],
+  "rules": {
+    "import/extensions": "off",
+    "quotes": ["warn", "single"],
+    "semi": ["warn", "never"],
+    "import/no-unresolved": "off",
+    "todo-ddl/diy": "warn",
+    "import/prefer-default-export": "off",
+    "no-param-reassign": "warn",
+    "import/no-extraneous-dependencies": "off",
+    "max-len": "warn",
+    "no-restricted-syntax": "off",
+    "no-bitwise": "off",
+    "camelcase": "off",
+    "no-case-declarations": "off",
+    "no-undef": "off",
+    "no-promise-executor-return": "off",
+    "vue/multi-word-component-names": "off",
+    "linebreak-style": "off",
+    "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off"
+  }
+}

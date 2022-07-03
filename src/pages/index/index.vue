@@ -1,70 +1,45 @@
 <template>
-  <view class="content">
-    <image class="logo" src="/static/logo.png"></image>
+  <view class="index-page">
+    <Hello />
+    <text class="h2"> 查看其它页面↓ </text>
     <view>
-      <text class="title">{{ title }}</text>
-    </view>
-    <view>
-      <text>
-        页面导航
-      </text>
-    </view>
-    <view class="nav">
-      <!-- 导航 -->
-      <navigator
-        v-for="(l, idx) in links"
-        :key="idx"
-        :url="l.href"
-        open-type="navigate"
-        hover-class="navigator-hover"
-      >
-        {{ l.text }}
-      </navigator>
+      <navigator v-for="(v, idx) in pages" :key="idx" :url="v.url">{{
+        v.title
+      }}</navigator>
     </view>
   </view>
 </template>
 
-<script>
-export default {
-  data () {
-    return {
-      title: 'Hello World',
-      links: [
-        { href: '../axios/index', text: 'axiios' },
-        { href: '../vant/index', text: 'vant' },
-        { href: '../vuex/index', text: 'vuex' }
-      ]
-    }
+<script setup>
+import { reactive } from 'vue'
+import Hello from '@/components/hello/index.vue'
+
+const pages = reactive([
+  {
+    title: 'Pinia Demo',
+    url: '/pages/pinia/index'
   },
-  onLoad () {},
-  methods: {}
-}
+  {
+    title: 'Axios Demo',
+    url: '/pages/axios/index'
+  },
+  {
+    title: 'uView Demo',
+    url: '/pages/uview/index'
+  }
+])
 </script>
 
-<style lang="scss">
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+<style scoped>
+.index-page {
+  font-style: normal;
+  text-align: center;
 }
-
-.logo {
-  height: 200rpx;
-  width: 200rpx;
-  margin: 200rpx auto 50rpx auto;
+.h2 {
+  color: green;
+  font-size: 50rpx;
 }
-
-.title {
-  font-size: 36rpx;
-  color: #8f8f94;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-around;
-  navigator {
-    margin: 10rpx;
-  }
+navigator {
+  color: #1e80ff;
 }
 </style>

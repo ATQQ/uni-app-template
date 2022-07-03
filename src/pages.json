@@ -4,25 +4,25 @@
     {
       "path": "pages/index/index",
       "style": {
-        "navigationBarTitleText": "uni-app"
+        "navigationBarTitleText": "uni-app-home"
+      }
+    },
+    {
+      "path": "pages/pinia/index",
+      "style": {
+        "navigationBarTitleText": "状态管理工具（pinia）"
       }
     },
     {
       "path": "pages/axios/index",
       "style": {
-        "navigationBarTitleText": "axios"
+        "navigationBarTitleText": "Axios（网络请求示例）"
       }
     },
     {
-      "path": "pages/vant/index",
+      "path": "pages/uview/index",
       "style": {
-        "navigationBarTitleText": "vant"
-      }
-    },
-    {
-      "path": "pages/vuex/index",
-      "style": {
-        "navigationBarTitleText": "vuex"
+        "navigationBarTitleText": "uView 示例组件"
       }
     }
   ],
@@ -30,11 +30,11 @@
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
     "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8",
-    // 此处引入vant-weapp组件
-    "usingComponents": {
-      "van-button": "/wxcomponents/@vant/weapp/dist/button/index",
-      "van-icon": "/wxcomponents/@vant/weapp/dist/icon/index"
+    "backgroundColor": "#F8F8F8"
+  },
+  "easycom": {
+    "custom": {
+      "^u-(.*)": "vk-uview-ui/components/u-$1/u-$1.vue"
     }
   }
 }

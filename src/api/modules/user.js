@@ -1,14 +1,24 @@
-import http from '../../utils/http'
+import http from '../http'
 
-function login (code, nickname, gender, avatar) {
-  return http.post('/user/login', {
-    code,
-    nickname,
-    gender,
-    avatar
+function login(account, pwd) {
+  return http.post('user/login', {
+    account,
+    pwd
   })
 }
 
+/**
+ * 获取验证码
+ * @param mobile 手机号
+ */
+function getCode(phone) {
+  return http.get('random/code', {
+    params: {
+      phone
+    }
+  })
+}
 export default {
-  login
+  login,
+  getCode
 }

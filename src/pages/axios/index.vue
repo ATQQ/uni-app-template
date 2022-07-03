@@ -1,58 +1,40 @@
 <template>
-  <view>
-    <view class="title">
-      <text>{{ title }}</text>
-    </view>
-    <view>
-      <button @click="handleGlobal">全局方法</button>
-      <textarea v-model="value1"></textarea>
-    </view>
-    <view>
-      <button @click="handleMethod">包装方法调用</button>
-      <textarea v-model="value2"></textarea>
-    </view>
-    <view>
-      <button @click="handleVuex">vuex调用</button>
-      <textarea v-model="value3"></textarea>
-    </view>
+  <view class="axios-demo">
+    <view class="h1">Axios Page</view>
+    <u-input type="number" v-model="phone" />
+    <u-button @click="getCode">获取验证码(GET)</u-button>
   </view>
 </template>
+<script setup>
+import { ref } from 'vue'
+import { userApi } from '@/api'
 
-<script>
-import { mapState, mapActions } from 'vuex'
-export default {
-  data () {
-    return {
-      title: 'axios示例',
-      value1: '',
-      value2: ''
-    }
-  },
-  computed: {
-    ...mapState('test', ['value3'])
-  },
-  methods: {
-    ...mapActions('test', ['refreshWeather']),
-    handleGlobal () {
-      this.$http.get('demoAPi').then(res => {
-        this.value1 = JSON.stringify(res)
+const phone = ref('12345678901')
+
+const getCode = () => {
+  userApi
+    .getCode(phone.value)
+    .then((v) => {
+      uni.showToast({
+        title: `${v.num}`,
+        icon: 'success'
       })
-    },
-    handleMethod () {
-      this.$api.test.checkWeather().then(res => {
-        this.value2 = JSON.stringify(res)
+    })
+    .catch((err) => {
+      console.log(err)
+      uni.showToast({
+        title: '获取验证码失败',
+        icon: 'error'
       })
-    },
-    handleVuex () {
-      this.refreshWeather()
-    }
-  }
+    })
 }
 </script>
 
-<style scoped>
-.title {
+<style lang="less">
+.axios-demo {
   text-align: center;
-  padding: 20rpx;
+}
+.h1 {
+  font-size: 50rpx;
 }
 </style>

@@ -1,8 +1,9 @@
 .DS_Store
 node_modules/
 unpackage/
-/dist
+dist/
 wxcomponents
+
 # local env files
 .env.local
 .env.*.local
@@ -21,3 +22,4 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+.hbuilderx

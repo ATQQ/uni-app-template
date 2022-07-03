@@ -1,21 +1,13 @@
-import Vue from 'vue'
-import App from './App'
-import http from './utils/http'
-import api from './api/index'
-import store from './store/index'
-import dateFormat from './utils/dateFormat'
+import { createSSRApp } from 'vue'
+import { createPinia } from 'pinia'
+import uView from 'vk-uview-ui'
+import App from './App.vue'
 
-Vue.prototype.$http = http
-Vue.prototype.$api = api
-
-// eslint-disable-next-line no-extend-native
-Date.prototype.Format = dateFormat
-Vue.config.productionTip = false
-
-App.mpType = 'app'
-
-const app = new Vue({
-  ...App,
-  store
-})
-app.$mount()
+export function createApp() {
+  const app = createSSRApp(App)
+  app.use(createPinia())
+  app.use(uView)
+  return {
+    app
+  }
+}
